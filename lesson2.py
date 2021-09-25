@@ -132,5 +132,24 @@
 # for symbol in my_str_1:
 #     print(f"symbol '{symbol}' --> {ord(symbol)}")
 
-for index in range(ord("a"), ord('z') +1, 2):
-    print(f"index '{index}' --> {chr(index)}")
+# for index in range(ord("a"), ord('z') +1, 2):
+#     print(f"index '{index}' --> {chr(index)}")
+
+
+#################################################################################
+# while условие
+#  блок, если да
+
+count = 0
+while count < 10:
+    print("This is while loop", count)
+    count += 1
+###########################################################################
+count = 0
+do_loop = True
+
+while do_loop:
+    print("This is while loop", count)
+    count += 1
+    if count >= 10:
+        do_loop = False
