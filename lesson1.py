@@ -98,7 +98,7 @@
 # print(my_str_1_len, my_str_1[my_str_1_len - 1])
 
 # срез строки
-my_str_1 = "I'm Qwerty"
+# my_str_1 = "I'm Qwerty"
 # new_str = my_str_1[4:7]   # часть строки от левого индекса(включительно) до правого индекса(не включительно)
 # new_str = my_str_1[40:70]   # ОШИБКИ НЕТ
 # new_str = my_str_1[1:-1]  #  'm Qwert
@@ -113,15 +113,36 @@ my_str_1 = "I'm Qwerty"
 # new_str = my_str_1[1:-1:3]  # 3 - шаг среза
 # new_str = my_str_1[::2]  # символы на четных местах в строке
 # new_str = my_str_1[1::2]  # символы на не четных местах в строке
-new_str = my_str_1[::-1]   # разворот строки
-print(new_str)
+# new_str = my_str_1[::-1]   # разворот строки
+# print(new_str)
 
-
-
-
-
-
+# my_str_1 = "I'm Qwerty"
 #
+# if my_str_1[-1] == "a":
+#     print(f"a on last position in {my_str_1}")
+# else:
+#     print(f"'a' on last position in {my_str_1}")
+
+# my_str_1 = "I'm Qwerty"
+# for symbol in my_str_1:   # строка - итерируемый объект
+#     if (symbol.lower() not in "eyuioa") and symbol.isalpha() and symbol.isupper():
+#         print(symbol)
+
+# my_str_1 = "I'm Qwerty"
+# for symbol in my_str_1:
+#     print(f"symbol '{symbol}' --> {ord(symbol)}")
+
+for index in range(ord("a"), ord('z') +1, 2):
+    print(f"index '{index}' --> {chr(index)}")
+
+
+
+
+
+
+######################################################################################################################
+# УРОК 1
+####################################################################################################################3
 # value = 0.00001
 # value_bool = bool(value)   # всегда true, кроме зачения 0.0, для 0 --> False 0.00000000.....001 (400+ нулей)
 # print(value_bool)
