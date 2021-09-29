@@ -140,16 +140,30 @@
 # while условие
 #  блок, если да
 
-count = 0
-while count < 10:
-    print("This is while loop", count)
-    count += 1
-###########################################################################
-count = 0
-do_loop = True
+# count = 0
+# while count < 10:
+#     print("This is while loop", count)
+#     count += 1
+# ###########################################################################
+# count = 0
+# do_loop = True
+#
+# while do_loop:
+#     print("This is while loop", count)
+#     count += 1
+#     if count >= 10:
+#         do_loop = False
 
-while do_loop:
-    print("This is while loop", count)
-    count += 1
-    if count >= 10:
-        do_loop = False
+
+
+
+
+
+
+
+
+
+
+
+
+
