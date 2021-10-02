@@ -1,38 +1,24 @@
  # домашнее задание
- #1
-
-# value = 102
-# value = int(value)
-# if value < 100:
-#  new_value = value // 2
-#  print (new_value)
-# else:
-#  new_value = - value
-#  print(new_value)
-
- ##############################################################################
- #2
-
-# value = 99
-# value = int(value)
-# if value < 100:
-#     new_value = 1
-#     print(new_value)
-# else:
-#     new_value = 0
-#     print(new_value)
-
-#################################################################################
- #3
+ #1 (доработано)
 
 # value = 100
-# value = int(value)
-# if value < 100:
-#     new_value = True
-#     print(new_value)
-# else:
-#     new_value = False
-#     print(new_value)
+# new_value = value // 2 if value > 100 else - value
+# print(new_value)
+
+ ##############################################################################
+ #2 (доработано)
+
+# value = 99
+# new_value = 1 if value < 100 else 0
+# print(new_value)
+
+#################################################################################
+ #3  (доработано)
+
+# value = 99
+# new_value = value < 100 if value else value
+# print(new_value)
+
 
 
 ###################################################################################
@@ -50,21 +36,23 @@
 # print(my_str)
 
 ####################################################################################
- #6
+ #6 (доработано)
 #
 # my_str = "Serg"
 # if len(my_str) < 5:
-#     print(my_str * 2)
-# else:
-#     print(my_str)
+#     result = (my_str) * 2
+# elif len(my_str) >= 5:
+#     result = (my_str)
+# print(result)
 
 ###################################################################################
- #7
-#
+ #7 (доработано)
+
 # my_str = "Serg"
 # if len(my_str) < 5:
-#     print(my_str + my_str[::-1])
-# else:
-#     print(my_str)
+#     result = (my_str + my_str[::-1])
+# elif len(my_str) >= 5:
+#     result = (my_str)
+# print(result)
 
 
