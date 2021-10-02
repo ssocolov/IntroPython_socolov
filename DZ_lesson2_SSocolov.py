@@ -37,22 +37,22 @@
 
 ####################################################################################
  #6 (доработано)
-#
+
 # my_str = "Serg"
 # if len(my_str) < 5:
-#     result = (my_str) * 2
-# elif len(my_str) >= 5:
-#     result = (my_str)
-# print(result)
+#     my_str = my_str * 2
+# else:
+#     print(my_str)
+# print(my_str)
 
 ###################################################################################
  #7 (доработано)
-
+#
 # my_str = "Serg"
 # if len(my_str) < 5:
-#     result = (my_str + my_str[::-1])
-# elif len(my_str) >= 5:
-#     result = (my_str)
-# print(result)
+#     my_str = my_str + my_str[::-1]
+#     print(my_str)
+# else:
+#     print(my_str)
 
 
