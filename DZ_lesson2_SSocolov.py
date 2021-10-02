@@ -1,23 +1,23 @@
  # домашнее задание
  #1 (доработано)
 
-# value = 100
-# new_value = value // 2 if value > 100 else - value
+# value = -110
+# new_value = value // 2 if value < 100 else - value
 # print(new_value)
 
  ##############################################################################
  #2 (доработано)
 
-# value = 99
+# value = 110
 # new_value = 1 if value < 100 else 0
 # print(new_value)
 
 #################################################################################
  #3  (доработано)
 
-# value = 99
-# new_value = value < 100 if value else value
-# print(new_value)
+# value = 110   # привел к такому виду. Почему при value = 0, не True не понял :(
+# value = value < 100 if value else value
+# print(value)
 
 
 
