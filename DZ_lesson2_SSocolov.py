@@ -1,14 +1,14 @@
  # домашнее задание
  #1 (доработано)
-
+#
 # value = -110
-# new_value = value // 2 if value < 100 else - value
+# new_value = value / 2 if value < 100 else - value
 # print(new_value)
 
  ##############################################################################
  #2 (доработано)
 
-# value = 110
+# value = 99
 # new_value = 1 if value < 100 else 0
 # print(new_value)
 
