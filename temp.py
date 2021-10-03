@@ -13,10 +13,15 @@
 # result = case ** 2 if case > 3 else -case
 #
 # print("Выпало число:", case, "Результат:", result)
+# case = 0
+# if case > 2:
+#      result = case ** 2
+# else:
+#      result = - case
+#
+# # result = case ** 2 if case > 3 else -case
+# print(not result)
 
-# value = 99
-# new_value = value // 2 if value > 100 else - value
-# print(new_value)
 
 
 # 6 (доработано)
