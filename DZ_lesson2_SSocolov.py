@@ -13,10 +13,10 @@
 # print(new_value)
 
 #################################################################################
- #3  (доработано)
+ #3  (исправлено)
 
-# value = 110   # привел к такому виду. Почему при value = 0, не True не понял :(
-# value = value < 100 if value else value
+# value = 0
+# value = True if value < 100 else False
 # print(value)
 
 
@@ -36,23 +36,19 @@
 # print(my_str)
 
 ####################################################################################
- #6 (доработано)
+ #6 (подкорректировано)
 
-# my_str = "Serg"
+# my_str = "Serg5"
 # if len(my_str) < 5:
 #     my_str = my_str * 2
-# else:
-#     print(my_str)
 # print(my_str)
 
 ###################################################################################
- #7 (доработано)
+ #7 (подкорректировано)
 #
-# my_str = "Serg"
+# my_str = "Serg55"
 # if len(my_str) < 5:
 #     my_str = my_str + my_str[::-1]
-#     print(my_str)
-# else:
-#     print(my_str)
+# print(my_str)
 
 
