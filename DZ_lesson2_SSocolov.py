@@ -15,9 +15,9 @@
 #################################################################################
  #3  (доработано)
 
-# value = 110   # привел к такому виду. Почему при value = 0, не True не понял :(
-# value = value < 100 if value else value
-# print(value)
+# value = 0
+# new_value = value <= 100 if value else value
+# print(bool(new_value))
 
 
 
