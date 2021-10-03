@@ -24,10 +24,10 @@
 
 
 #################################################################################
-# Кортежи (tuple) и списки (list)
+# Кортежи (tuple) и списки [list]
 # итерируемые объекты
-# my_tuple = (1, -10, "qwe", True, 3.14, (-2, 0), ["a", "z"])
-# my_list = [1, -10, "qwe", True, 3.14, (-2, 0), ["a", "z"]]
+# my_tuple = (1, -10, "qwe", True, 3.14, (-2, 0), ["a", "z"])   # пример кортежа
+# my_list = [1, -10, "qwe", True, 3.14, (-2, 0), ["a", "z"]]    # пример списка
 
 # print(my_tuple, type(my_tuple))
 # print(my_list, type(my_list))
@@ -36,21 +36,21 @@
 # print(len(my_tuple), len(my_list))
 
 # срезы как у строк!!!!
-# new_tuple = my_tuple[::-1]
+# new_tuple = my_tuple[::-1]      # перевернул с конца
 # print(new_tuple)
-
-# for value in my_list:
-#     if type(value) == int:
+#
+# for value in my_list:         # выбрать из списка
+#     if type(value) == int:    # значения которые являются числом (int)
 #         print(value)
 # ##################################################################### отличия
 # my_tuple = (1, -10, "qwe", True, 3.14, (-2, 0), ["a", "z"])  # не изменяемый тип данных
 # my_list = [1, -10, "qwe", True, 3.14, (-2, 0), ["a", "z"]]   # изменяемый тип данных
-#
-# my_list[0] = 100
+
+# my_list[0] = 100        # заменяет нулевой элемент списка на заданное значение
 #
 # print(my_list)
 #
-# # my_tuple[0] = 100  # выдаст ошибку так как запрещено
+# my_tuple[0] = 100  # выдаст ошибку так как запрещено
 # my_tuple[0] = (100, *my_tuple[1:])
 # print(my_tuple)
 
@@ -122,7 +122,7 @@
 #
 # new_list = list("new_tuple")
 # print(new_list)
-# # new_list = ["1", "2", "0.3]
+# new_list = ["1", "2", "0.3]
 # new_str = "$".join(new_list)
 # print(new_str)
 
