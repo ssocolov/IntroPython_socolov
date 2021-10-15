@@ -141,15 +141,15 @@
 # for врем_перем in итер_объект:
 #    итерация
 
-my_str = "qwerty 123 #%$ ASD"
+# my_str = "qwerty 123 #%$ ASD"
 
-for symbol in my_str:
-    if not symbol.isalnum() and symbol != " ":
-        print(symbol)
+# for symbol in my_str:
+#     if symbol.isdigit():
+#         print(symbol)
 
 
 # for symbol in my_str:
-#     if symbol.lower() in "eyuioa":
+#     if not symbol.lower() in "eyuioa":
 #         print(symbol)
 
 
