@@ -43,9 +43,11 @@
 # Еще один пример - вложенные циклы (цикл в цикле).
 # my_string_1 = "12"
 # my_string_2 = "34"
-# for symb_1 in my_string_1:
-# 	for symb_2 in my_string_2:
-# 		print(symb_1 + symb_2)
+# for symbol_1 in my_string_1:
+# 	for symbol_2 in my_string_2:
+# 		print(symbol_1 + symbol_2)
+
+
 #
 #
 #
