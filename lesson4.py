@@ -9,9 +9,9 @@
 
 # my_str = "blablacarblablacar"
 # my_symbol = "bla"
-# # result = my_str.count(my_symbol)  # метод count более подходящий
-# new_str = my_str.replace(my_symbol, '')
-# result = (len(my_str) - len(new_str)) // len(my_symbol)
+# result = my_str.count(my_symbol)  # метод count более подходящий
+# # new_str = my_str.replace(my_symbol, '')
+# # result = (len(my_str) - len(new_str)) // len(my_symbol)
 # print(result)
 
 """
