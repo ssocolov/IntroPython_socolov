@@ -121,15 +121,16 @@
 #######################################################################################################################
 # 8. Дана строка my_str. Создать список в который поместить те символы из my_str,
 # которые встречаются в строке ТОЛЬКО ОДИН раз.
-# my_str = "qwertyzqwerty"
+# my_str = "qwerty2qwerty"
 # my_list = []
 # for symbol in my_str:
-#     if symbol in my_str:
-#
-#
-#
+#     if symbol.count() == 1:
 #         my_list.append(symbol)
 # print(my_list)
+
+
+
+
 
 
 
