@@ -1,15 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
 # приведение типов
 # value_0 = False
 # value = str(value_0)

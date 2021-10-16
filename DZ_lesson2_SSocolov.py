@@ -16,10 +16,10 @@
  #3  (исправлено)
 
 # value = 0
-# value = True if value < 100 else False
-# print(value)
+# new_value = True if value < 100 else False
+# print(new_value)
 
-
+# new_value = value < 100    # как бы выглядело в проекте.
 
 ###################################################################################
  #4
@@ -42,6 +42,10 @@
 # if len(my_str) < 5:
 #     my_str = my_str * 2
 # print(my_str)
+
+# если тернарный оператор, то...
+# my_str = my_str * 2 if len(my_str) < 5 else my_str
+
 
 ###################################################################################
  #7 (подкорректировано)
