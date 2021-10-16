@@ -35,13 +35,13 @@
 # В переменную sub_str поместить НАИБОЛЬШУЮ часть строки между этими символами.
 # my_str = "My long string", l_limit = "o", r_limit = "g" -> sub_str = "ng strin".
 #
-my_str = "My long string"
-new_str = str(my_str[::-1])
-l_limit = "o"
-r_limit = "g"
-sub_str = new_str[(new_str.find(r_limit) + 1): new_str.rfind(l_limit)]
-result = sub_str[::-1]
-print(result)
+# my_str = "My long string"
+# new_str = str(my_str[::-1])
+# l_limit = "o"
+# r_limit = "g"
+# sub_str = new_str[(new_str.find(r_limit) + 1): new_str.rfind(l_limit)]
+# result = sub_str[::-1]
+# print(result)
 
 
 #######################################################################################################################
