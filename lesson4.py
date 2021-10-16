@@ -1,11 +1,11 @@
 
-"""
-1) У вас есть переменная my_str, тип - str. И переменная my_symbol, тип - str.
-Напечатать ЧИСЛО сколько раз my_symbol встречается в my_str.
-Пример:  my_str="blablacar", my_symbol="bla".
-Вывод на экран:
-2
-"""
+# """
+# 1) У вас есть переменная my_str, тип - str. И переменная my_symbol, тип - str.
+# Напечатать ЧИСЛО сколько раз my_symbol встречается в my_str.
+# Пример:  my_str="blablacar", my_symbol="bla".
+# Вывод на экран:
+# 2
+# """
 
 # my_str = "blablacarblablacar"
 # my_symbol = "bla"
@@ -14,14 +14,14 @@
 # # result = (len(my_str) - len(new_str)) // len(my_symbol)
 # print(result)
 
-"""
-2) У вас есть переменная my_str, тип - str. И переменная my_symbol, тип - str. 
-Напечатать столько раз my_symbol, сколько он встречается в my_str. 
-Пример:  my_str="blablacar", my_symbol="bla". 
-Вывод на экран:
-bla
-bla
-"""
+# """
+# 2) У вас есть переменная my_str, тип - str. И переменная my_symbol, тип - str.
+# Напечатать столько раз my_symbol, сколько он встречается в my_str.
+# Пример:  my_str="blablacar", my_symbol="bla".
+# Вывод на экран:
+# bla
+# bla
+# """
 # my_str = "blablacar"
 # my_symbol="bla"
 #
@@ -34,15 +34,15 @@ bla
 # for _ in range(my_symbol_count):
 #     print(my_symbol)
 
-"""
-3) У вас есть переменная my_str, тип - str. Напечатать ЧИСЛО сколько 
-РАЗНЫХ символов встречается в my_str. 
-Большая и маленькая буква считается как один символ. 
-Пробелы, запятые и т.д. считаем тоже как символы.
-Пример:  my_str="bla BLA car". 
-Вывод на экран:
-6
-"""
+# """
+# 3) У вас есть переменная my_str, тип - str. Напечатать ЧИСЛО сколько
+# РАЗНЫХ символов встречается в my_str.
+# Большая и маленькая буква считается как один символ.
+# Пробелы, запятые и т.д. считаем тоже как символы.
+# Пример:  my_str="bla BLA car".
+# Вывод на экран:
+# 6
+# """
 # my_str = "bla BLA car"
 # lower_str = my_str.lower()
 # unique_symbols = []
@@ -53,12 +53,12 @@ bla
 # print(unique_symbols_count)
 
 
-"""
-4)
-Дана строка my_str и пустой список my_list.
-Заполнить my_list символами из my_str, 
-которые стоят на четных местах в строке (считаем с 0)
-"""
+# """
+# 4)
+# Дана строка my_str и пустой список my_list.
+# Заполнить my_list символами из my_str,
+# которые стоят на четных местах в строке (считаем с 0)
+# """
 
 
 
@@ -75,14 +75,14 @@ bla
 
 
 
-
-"""
-5)
-Дана строка my_str, список str_index целых чисел в диапазоне от 
-0 до длинны строки минус 1, пустой список my_list.
-Заполнить my_list символами из my_str, которые стоят на местах с 
-индексами из str_index
-"""
+#
+# """
+# 5)
+# Дана строка my_str, список str_index целых чисел в диапазоне от
+# 0 до длинны строки минус 1, пустой список my_list.
+# Заполнить my_list символами из my_str, которые стоят на местах с
+# индексами из str_index
+# """
 # from string import ascii_lowercase as alphabet
 #
 # my_str = alphabet
@@ -92,27 +92,27 @@ bla
 #     symbol = my_str[index]
 #     my_list.append(symbol)
 # print(my_list)
-
-"""
-6)
-Дано целое число (int). Определить сколько цифр в этом числе.
-"""
+#
+# """
+# 6)
+# Дано целое число (int). Определить сколько цифр в этом числе.
+# """
 # number = 13224545767345253445654643
 # digit_count = len(str(number))
 # print(digit_count)
 
-"""
-7)
-Дано целое число. Определить наибольшую цифру в этом числе.
-"""
+# """
+# 7)
+# Дано целое число. Определить наибольшую цифру в этом числе.
+# """
 # number = 13224545876734528534456548643
 # max_symbol = max(str(number))
 # print(max_symbol)
-
-"""
-8)
-Дано целое число. Составить число (int) с цифрами в обратном порядке.
-"""
+#
+# """
+# 8)
+# Дано целое число. Составить число (int) с цифрами в обратном порядке.
+# """
 # number = 13224545876734528534456548643
 #
 #  numb_str = str(number)
@@ -120,11 +120,11 @@ bla
 #
 # result_number = int(str(number)[::-1])    # одно и тоже
 #
-# print(result_number)
-"""
-9)
-Дано целое число. Составить число с цифрами в порядке возрастания(убывания).
-"""
+# # print(result_number)
+# """
+# 9)
+# Дано целое число. Составить число с цифрами в порядке возрастания(убывания).
+# """
 # number = 13224545876734520853445065480643
 # numb_str = str(number)
 # sort_numb_list = sorted(numb_str , reverse=True)
@@ -143,13 +143,13 @@ bla
 
 
 
-"""
-10) Даны списки my_list_1 и my_list_2.
-Создать список my_result в который поместить элементы из my_list_1 и
-my_list_2 через один, начиная с my_list_1.
-а) кол-во эл-тов одинаковое
-б) кол-во эл-тов разное. Оставшиеся дописать в конец.
-"""
+# """
+# 10) Даны списки my_list_1 и my_list_2.
+# Создать список my_result в который поместить элементы из my_list_1 и
+# my_list_2 через один, начиная с my_list_1.
+# а) кол-во эл-тов одинаковое
+# б) кол-во эл-тов разное. Оставшиеся дописать в конец.
+# """
 # my_list_1 = [1, 2, 3]
 # my_list_2 = [10, 20, 30, 40 ,50]
 # my_result = []
@@ -217,28 +217,34 @@ my_list_2 через один, начиная с my_list_1.
 # #####################################################
 # множества (set) - изменяемый тип, только один представитель для каждого объекта, порядок не сохраняется
 ############### пересмотреть ##########################
-# my_list = [1, 2, 3, 4, "5", 5, 5, "1"]
-#
+# my_list = [1, "2", 3, 4, "5", "5", "1"]
+# my_list_unique = list(set(my_list))  # Убрать дубли в списке
 # my_set = set(my_list)
+# my_set.add(1000)
 # print(my_set, type(my_set))
-
-
+#
+#
+# my_str = "bla BLA carqqqq"
 # unique_symbols_count = len(set(my_str.lower()))
-# print(unique_symbols)
-#найти символы которые.... пересекаются, объединяются, есть в первом только множестве
-# my_str_1 = "rtuyuoefojhgiejgtperwoitperptiore"
-# my_str_2 = "eriughdfkfasljhflesrjg;ldfkmnblshf;fkjbn"
-# my_str_1_set = set(my_str_1)
-# my_str_2_set = set(my_str_2)
+# print(unique_symbols_count)
 
-# same_symbols = my_str_1_set.intersection(my_str_2_set)  # пересечение
+# найти символы которые.... пересекаются, объединяются, есть в первом только множестве
+# my_str_1 = "sdlkjfgkzdfkzhdfkjvakjdfvbaydsgfaksjdasudvb"
+# my_str_2 = "saudhflsdkzao;uh giy7gfsazhnvcahirhvsmcflaouewyhflia"
+#
+# my_str_1_set = set(my_str_1)            # приведение к множеству
+# my_str_2_set = set(my_str_2)            # приведение к множеству
+#
+# same_symbols = my_str_1_set.intersection(my_str_2_set)      # пересечение
 # print(same_symbols)
 
-# all_symbols = my_str_1_set.union(my_str_2_set)  # объединение
+# all_symbols = my_str_1_set.union(my_str_2_set)              # объединение
 # print(all_symbols)
-
-# first_str_unique = my_str_1_set.difference(my_str_2_set)  # только символы которые есть в первой строке, но нет во второй
+#
+# first_str_unique = my_str_1_set.difference(my_str_2_set)    # только символы которые есть в первой строке, но нет во второй
 # print(first_str_unique)
+
+
 
 
 

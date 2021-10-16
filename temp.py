@@ -79,7 +79,7 @@
 # new_str = str(my_str[::-1])
 # l_limit = "o"
 # r_limit = "g"
-# sub_str = str(new_str[(new_str.index(r_limit) + 1): new_str.index(l_limit)])
+# sub_str = new_str[(new_str.find(r_limit) + 1): new_str.rfind(l_limit)]
 # result = sub_str[::-1]
 # print(result)
 
@@ -124,32 +124,19 @@
 # которые встречаются в строке ТОЛЬКО ОДИН раз.
 # my_str = "qwerty2qwerty"
 # my_list = []
-# for symbol in my_str:
-#     if symbol.count() == 1:
+# for symbol in set(my_str):
+#     if my_str.count(symbol) == 1:
 #         my_list.append(symbol)
 # print(my_list)
-
-
-
-
-
-
 
 #######################################################################################################################
 # 9. Даны две строки. Создать список в который поместить те символы,
 # которые есть в обеих строках хотя бы раз.
 #
-# my_str = 'qwertyreq'
-#
-# print(type(my_str))
-#
-# my_list = [1, "2", 3, 4, "5", "5", "1"]
-# my_list_unique = list(set(my_list))  # Убрать дубли в списке
-# my_set = set(my_list)
-# my_set.add(1000)
-# print(my_set, type(my_set))
-
-
+# my_str_1 = "abblikbc3"
+# my_str_2 = "aahkbcc4"
+# my_list = list(set(my_str_1).intersection(set(my_str_2)))
+# print(my_list)
 
 
 #######################################################################################################################
@@ -157,6 +144,15 @@
 # но в каждой ТОЛЬКО ПО ОДНОМУ разу.
 # Пример: для строк "aaaasdf1" и "asdfff2" ответ ["s", "d"], т.к. эти символы есть в каждой строке по одному разу
 #
+# my_str_1 = "aaaasdf1"             # "to be or not to be?"
+# my_str_2 = "asdfff2"              # "back to future?"
+# my_list = []
+# for i in my_str_1 :
+#     k = my_str_1.find(i) - my_str_1.rfind(i)
+#     if k == 0:
+#         if i in my_str_2 and my_str_2.find(i) - my_str_2.rfind(i) == 0 :
+#             my_list.append(i)
+# print(my_list)
 
 
 ########################################################################################################################
@@ -164,6 +160,8 @@
 # Если строка содержит нечетное количество символов, пропущенный второй символ последней пары должен
 # быть заменен подчеркиванием ('_'). Примеры: 'abcd' -> ['ab', 'cd'], 'abcde' -> ['ab', 'cd', e_']
 # (используйте срезы длинны 2)
+
+# my_str = "abcde"
 
 
 
