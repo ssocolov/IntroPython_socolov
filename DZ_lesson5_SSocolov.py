@@ -131,7 +131,20 @@
 # перевернутую строку. "qwe" на "ewq".
 # Если на четном - оставить без изменения.
 
+# my_list = ["qwe", "asd", "zxc", "qaz", "xsw", "edc"]
+#
+# def new_list(my_list):
+#     result = []
+#     for index in range(len(my_list)):
+#         if index % 2:
+#             result.append(my_list[index][::-1])
+#         else:
+#             result.append(my_list[index])
+#     return result
+#
+# print(new_list(["qwe", "asd", "zxc", "qaz", "xsw", "edc"]))
 
+#####################################################################################################################
 #
 # 4.Даны списки names и domains (создать самостоятельно).
 # Написать функцию для генерирования e-mail в формате:
@@ -145,3 +158,40 @@
 # e_mail = create_email(domains, names)
 # print(e_mail)
 # >>>miller.249@sgdyyur.com
+
+#
+# def create_email[domains, names]:
+#     e_mail = [random.randint(1, 10) for _ in range(len_list)]
+# #     return numbers
+#
+#
+# names = ["John", "Pieter", "Sam", "Jim"]
+# domains = ["com", "org", "net", "ua"]
+# e_mail = create_email[domains, names]
+#
+# print(e_mail)
+
+
+# функции
+# import random
+# # #
+# # #
+# def create_random_int_number_list(len_list=5):
+#     numbers = [random.randint(1, 10) for _ in range(len_list)]
+#     return numbers
+# #
+#
+# def print_dict(some_dict):  # создание своей функции print # всё что используем-ПЕРЕДАЁМ В ФУНКЦИЮ!!!
+#     for key, value in person.items():
+#         print(f"{key}: {value}")
+
+
+# my_dict = {"val_1": 12, "val_2": 24, "val_3": 6, "val_4": 58}
+# person = {"name": "John", "age": 23, "sex": "Male", }
+# #
+# print(person)
+# print(dict(person))
+# print(dict(some_dict=my_dict))
+# len_list = random.randint(10, 20)
+# result = create_random_int_number_list()
+# print(result)
