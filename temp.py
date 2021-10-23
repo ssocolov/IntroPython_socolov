@@ -83,11 +83,14 @@
 ###### lesson5_2
 
 
-# import random
-#
-#
-# # функции
-#
+import random
+one = random.randint(100, 999)
+print(one)
+
+
+
+
+
 # def create_random_int_number_list(len_list=5):
 #     numbers = [random.randint(1, 10) for _ in range(len_list)]
 #     return numbers
