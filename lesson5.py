@@ -105,13 +105,13 @@
 # def create_random_int_number_list(len_list=5):
 #     numbers = [random.randint(1, 10) for _ in range(len_list)]
 #     return numbers
-# #
+# # #
 #
 # def print_dict(some_dict):  # создание своей функции print # всё что используем-ПЕРЕДАЁМ В ФУНКЦИЮ!!!
 #     for key, value in person.items():
 #         print(f"{key}: {value}")
-
-
+#
+#
 # my_dict = {"val_1": 12, "val_2": 24, "val_3": 6, "val_4": 58}
 # person = {"name": "John", "age": 23, "sex": "Male", }
 # #

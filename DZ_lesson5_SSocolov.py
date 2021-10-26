@@ -160,38 +160,20 @@
 # >>>miller.249@sgdyyur.com
 
 #
-# def create_email[domains, names]:
-#     e_mail = [random.randint(1, 10) for _ in range(len_list)]
-# #     return numbers
-#
-#
-# names = ["John", "Pieter", "Sam", "Jim"]
-# domains = ["com", "org", "net", "ua"]
-# e_mail = create_email[domains, names]
-#
-# print(e_mail)
+import random
+import string
 
 
-# функции
-# import random
-# # #
-# # #
-# def create_random_int_number_list(len_list=5):
-#     numbers = [random.randint(1, 10) for _ in range(len_list)]
-#     return numbers
-# #
-#
-# def print_dict(some_dict):  # создание своей функции print # всё что используем-ПЕРЕДАЁМ В ФУНКЦИЮ!!!
-#     for key, value in person.items():
-#         print(f"{key}: {value}")
+def new_email():
+    return str(random.choice(names)) + '.' + str(rand_numb) + '@' + str(rand_word) + '.' + str(random.choice(domains))
 
 
-# my_dict = {"val_1": 12, "val_2": 24, "val_3": 6, "val_4": 58}
-# person = {"name": "John", "age": 23, "sex": "Male", }
-# #
-# print(person)
-# print(dict(person))
-# print(dict(some_dict=my_dict))
-# len_list = random.randint(10, 20)
-# result = create_random_int_number_list()
-# print(result)
+names = ["John", "Pieter", "Sam", "Jim"]
+domains = ["com", "org", "net", "ua"]
+rand_numb = random.randint(100, 999)
+rand_word = random.choice(string.ascii_lowercase)
+# for s in range(randint(5, 7)):
+
+# e_mail = str(random.choice(names)) + '.' + str(rand_numb) + '@' + str(rand_word) + '.' + str(random.choice(domains))
+
+print(str(new_email()))

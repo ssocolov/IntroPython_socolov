@@ -82,14 +82,60 @@
 
 ###### lesson5_2
 
-
+#######################################################################################
 import random
-one = random.randint(100, 999)
-print(one)
+import string
 
 
+def new_email(param):
+    names = str(random.choice(name))
+    rand_numb = str(random.randint(100, 999))
+    rand_word = str(random.choice(string.ascii_lowercase))
+    domains = str(random.choice(["com", "org", "net", "ua", "ru"]))
+    param = names + '.' + rand_numb + '@' + rand_word + '.' + str(random.choice(domains))
+    return param
 
 
+name = ["John", "Pieter", "Sam", "Jim"]
+# domains = ["com", "org", "net", "ua", "ru"]
+# rand_numb = random.randint(100, 999)
+# rand_word = random.choice(string.ascii_lowercase)
+# for s in range(randint(5, 7)):
+
+# e_mail = str(random.choice(names)) + '.' + str(rand_numb) + '@' + str(rand_word) + '.' + str(random.choice(domains))
+# new_email(name)
+print(new_email(name))
+#############################################################################################
+# def Mult2(number):
+#     number = number * 2
+#     print("Mult2.number = ", number)
+#
+# num = 25
+# Mult2(num)
+#
+# print("num = ", num)
+
+# import random
+# import string
+#
+#
+# def new_email():
+#     return str(random.choice(names)) + '.' + str(random.randint(100, 999)) + '@' + str(random.choice(string.ascii_lowercase)) + '.' + str(random.choice(domains))
+#     # return str(random.choice(names)) + '.' + str(random.randint(100, 999)) + '@' + str(random.choice(string.ascii_lowercase)) + '.' + str(random.choice(domains))
+#
+#
+# names = ["John", "Pieter", "Sam", "Jim", "Max"]
+# domains = ["com", "org", "net", "ua", "ru"]
+# # rand_numb = random.randint(100, 999)
+# # rand_word = random.choice(string.ascii_lowercase)
+# # for s in range(randint(5, 7)):
+#
+# # e_mail = str(random.choice(names)) + '.' + str(rand_numb) + '@' + str(rand_word) + '.' + str(random.choice(domains))
+#
+# print(new_email())
+
+
+#####################################################################################################################################################################################################
 
 # def create_random_int_number_list(len_list=5):
 #     numbers = [random.randint(1, 10) for _ in range(len_list)]
@@ -144,9 +190,6 @@ print(one)
 # print(res)
 
 
-
-
-
 #######################################################################################################################
 #######################################################################################################################
 
@@ -183,8 +226,6 @@ print(one)
 # Списки
 # print(list("список"))
 # #['с', 'п', 'и', 'с', 'о', 'к']
-
-
 
 
 # 1. Дано целое число (int). Определить сколько нулей в этом числе.
@@ -314,43 +355,6 @@ print(one)
 # (используйте срезы длинны 2)
 
 # my_str = "abcde"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # DZ_lesson_3 test
