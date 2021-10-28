@@ -132,17 +132,17 @@
 # Если на четном - оставить без изменения.
 
 # my_list = ["qwe", "asd", "zxc", "qaz", "xsw", "edc"]
-#
+
 # def new_list(my_list):
 #     result = []
 #     for index in range(len(my_list)):
-#         if index % 2:
+#         if not index % 2:
 #             result.append(my_list[index][::-1])
 #         else:
 #             result.append(my_list[index])
 #     return result
 #
-# print(new_list(["qwe", "asd", "zxc", "qaz", "xsw", "edc"]))
+# print(new_list(my_list))
 
 #####################################################################################################################
 #
@@ -160,20 +160,17 @@
 # >>>miller.249@sgdyyur.com
 
 #
-import random
-import string
+# import random
+# import string
+#
+# names = ["John", "Pieter", "Sam", "Jim"]
+# domains = ["com", "org", "net", "ua"]
+#
+# def new_email():
+#     return str(random.choice(names)) + '.' + str(random.randint(100, 999)) +\
+#            '@' + str(''.join(random.choice(string.ascii_lowercase) for i in range(random.randint(5, 7)))) + \
+#            '.' + str(random.choice(domains))
+#
+# print(new_email())
 
 
-def new_email():
-    return str(random.choice(names)) + '.' + str(rand_numb) + '@' + str(rand_word) + '.' + str(random.choice(domains))
-
-
-names = ["John", "Pieter", "Sam", "Jim"]
-domains = ["com", "org", "net", "ua"]
-rand_numb = random.randint(100, 999)
-rand_word = random.choice(string.ascii_lowercase)
-# for s in range(randint(5, 7)):
-
-# e_mail = str(random.choice(names)) + '.' + str(rand_numb) + '@' + str(rand_word) + '.' + str(random.choice(domains))
-
-print(str(new_email()))
