@@ -98,9 +98,9 @@ import string
 names = ["John", "Pieter", "Sam", "Jim"]
 domains = ["com", "org", "net", "ua"]
 
-def new_email(names):
+def new_email(names, domains):
     return str(random.choice(names)) + '.' + str(random.randint(100, 999)) + '@' + str(''.join(random.choice(string.ascii_lowercase) for i in range(random.randint(5, 7)))) + '.' + str(random.choice(domains))
-email = str(new_email(names))
+email = str(new_email(names, domains))
 print('4)', email)
 
 
