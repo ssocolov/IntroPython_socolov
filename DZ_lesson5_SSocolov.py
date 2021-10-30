@@ -99,8 +99,9 @@ names = ["John", "Pieter", "Sam", "Jim"]
 domains = ["com", "org", "net", "ua"]
 
 def new_email(names, domains):
-    return str(random.choice(names)) + '.' + str(random.randint(100, 999)) + '@' + str(''.join(random.choice(string.ascii_lowercase) for i in range(random.randint(5, 7)))) + '.' + str(random.choice(domains))
-email = str(new_email(names, domains))
+    return random.choice(names) + '.' + str(random.randint(100, 999)) + '@'\
+           + ''.join(random.choice(string.ascii_lowercase) for i in range(random.randint(5, 7))) + '.' + random.choice(domains)
+email = new_email(names, domains)
 print('4)', email)
 
 
