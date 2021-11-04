@@ -45,5 +45,3 @@ def dates(filename):
 
 
 print(dates("authors.txt"))
-
-
