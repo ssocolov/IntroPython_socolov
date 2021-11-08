@@ -1,15 +1,86 @@
-# Все пункты сделать как отдельные функции(можно создавать дополнительные вспомагательные функции)
+## первое слово в строке  #####
+
+# def first_word(text):
+#     new_txt = text.split()[0]
+#     return new_txt
 #
-# 1. Написать функцию, которая получает в виде параметра имя файла названия интернет доменов (domains.txt)
-# и возвращает их в виде списка строк (названия возвращать без точки).
+# text = "Hello world!"
+# print(first_word(text))
+
+## длина пароля больше 6 ####
+
+# def is_acceptable_password(password):
+#     if len(password) > 6:
+#         return True
+#     else:
+#         return False
 #
-# 2. Написать функцию, которая получает в виде параметра имя файла (names.txt)
-# и возвращает список всех фамилий из него.
-# Каждая строка файла содержит номер, фамилию, страну, некоторое число (таблица взята с википедии).
-# Разделитель - символ табуляции "\t"
+# print(is_acceptable_password("123453"))
+
+
+## количество цифр в числе ####
 #
-# 3. Написать функцию, которая получает в виде параметра имя файла (authors.txt) и возвращает список
-# словарей вида {"date_original": date_original, "date_modified": date_modified}
-# в которых date_original - это дата из строки (если есть),
-# а date_modified - эта же дата, представленная в формате "dd/mm/yyyy" (d-день, m-месяц, y-год)
-# Например [{"date_original": "8th February 1828", "date_modified": 08/02/1828},  ...]
+# def number_lenght(a):
+#     return len(str(a))
+#
+#
+# print(number_lenght(17810))
+
+
+## количество нулей вконце числа #####
+
+# def count_zero(num):
+#     num = len(str(num)) - len(str(num).strip('0'))
+#     return num
+#
+# print(count_zero(1000023000000000))
+
+
+## перевернуть слово наоборот ###########
+# def mirror_text(text):
+#     text = text[::-1]
+#     return text
+# print(mirror_text("aihpoS"))
+
+## удалить символы до заданного #########
+# from typing import Iterable
+#
+#
+# def remove_all_before(items: list, border: int) -> Iterable:
+#     k = j = 0
+#     for i in items:
+#         if i == border:
+#             j = k
+#             break
+#         k += 1
+#     return items[j:]
+#
+# print(list(remove_all_before([1, 2, 3, 4, 5], 3)))
+
+## проверка на большие буквы ####
+
+# def is_all_upper(text: str) -> bool:
+#     if text.upper() == text:
+#         return True
+#     elif len(text) == 0:
+#         return True
+#     return False
+
+
+from typing import Iterable
+
+
+#
+from typing import Iterable
+
+#
+# def replace_first(items: list) -> Iterable:
+#     items = list.index(1, ())
+#     return items
+# print(replace_first([1, 2, 3, 4]))
+
+my_list_1 = [1, 2, 3, 4]
+# my_list_1.index(1)
+my_list_2 = []
+
+print(my_list_1.index(1))
