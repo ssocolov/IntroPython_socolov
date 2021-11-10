@@ -67,11 +67,8 @@
 #     return False
 
 
-from typing import Iterable
-
-
 #
-from typing import Iterable
+# from typing import Iterable
 
 #
 # def replace_first(items: list) -> Iterable:
@@ -79,8 +76,24 @@ from typing import Iterable
 #     return items
 # print(replace_first([1, 2, 3, 4]))
 
-my_list_1 = [1, 2, 3, 4]
+# my_list_1 = [1, 2, 3, 4]
 # my_list_1.index(1)
-my_list_2 = []
 
-print(my_list_1.index(1))
+
+# print()
+
+
+# самая большая цифра в числе
+
+# def max_digit(a):
+#     m_dig = max([int(i) for i in str(a)])
+#     return m_dig
+#
+# print(max_digit(123))
+
+# Разделите строку на пары из двух символов. Если строка содержит нечетное количество символов, пропущенный второй символ последней пары должен быть заменен подчеркиванием ('_').
+
+
+
+
+
