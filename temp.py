@@ -43,7 +43,6 @@
 # print(mirror_text("aihpoS"))
 
 ## удалить символы до заданного #########
-# from typing import Iterable
 #
 #
 # def remove_all_before(items: list, border: int) -> Iterable:
@@ -67,21 +66,18 @@
 #     return False
 
 
-#
-# from typing import Iterable
+# В данном списке первый элемент должен стать последним. Пустой список или список из одного элемента не должен
+# измениться.
 
+# def replace_first(my_list):
+#     if my_list == []:
+#         return []
+#     my_list.append(my_list[0])
+#     my_list.remove(my_list[0])
+#     return my_list
 #
-# def replace_first(items: list) -> Iterable:
-#     items = list.index(1, ())
-#     return items
+#
 # print(replace_first([1, 2, 3, 4]))
-
-# my_list_1 = [1, 2, 3, 4]
-# my_list_1.index(1)
-
-
-# print()
-
 
 # самая большая цифра в числе
 
@@ -93,7 +89,29 @@
 
 # Разделите строку на пары из двух символов. Если строка содержит нечетное количество символов, пропущенный второй символ последней пары должен быть заменен подчеркиванием ('_').
 
+# def split_pairs(pair_symb):
+#     if len(pair_symb) % 2 != 0:
+#         pair_symb = pair_symb + '_'
+#     pair_symb = ([pair_symb[i:i +2]for i in range(0, len(pair_symb), 2)])
+#     return pair_symb
+# print(split_pairs('wetdsfsdf'))
 
 
+# количество нулей в начале строки
+
+# def end_zeros(num: int) -> int:
+#     return min((i for i, c in enumerate(str(num)[::1], 0) if c != '0'), default=len(num))
+#
+# print(end_zeros('000'))
 
 
+# проверка на четность. Четное True, нечетное False
+
+# def is_even(num: int) -> bool:
+#     if num % 2 == 0:
+#         return True
+#     else:
+#         return False
+#
+#
+# print(is_even(123))
