@@ -1,22 +1,21 @@
-# https://py.checkio.org/
-# сделать первый уровень
 #
 # Задание. data.json - файл с данными о некоторых математиках прошлого.
-#
-# 1. Необходимо написать функцию,
-# которая считает эти данные из файла и возвращала содержимое файла в той же структкру, что и в файле. Параметр
-# функции - имя файла.
 import os
 import json
+import re
 from operator import itemgetter
 
 os.chdir("DZ_files")
 
 
-def read_json(data):
-    with open(data, "r", encoding='utf-8') as file:
-        result = json.load(file)
-    return result
+# 1. Необходимо написать функцию,
+# которая считает эти данные из файла и возвращала содержимое файла в той же структкру, что и в файле. Параметр
+# функции - имя файла.
+
+def read_json(filename):
+    with open(filename, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+        return data
 
 
 print(read_json("data.json"))
@@ -37,21 +36,25 @@ print(sort_by_surname("data.json"))
 # 3. Написать функцию сортировки по дате смерти из поля "years".
 # Обратите внимание на сокращение BC. - это означает до н.э.
 
-##### ЗАДАНИЕ НЕ ЗАКОНЧЕНО ВОЗНИКЛИ ТРУДНОСТИ
-
-def death_date(data):
-    with open(data, "r", encoding='utf-8') as file:
-        for record in json.load(file):   # НЕ МОГУ ПОНЯТЬ, ПО КАКОЙ ПРИЧИНЕ ОН ВЫЧИТЫВАЕТ ИЗ СПИСКА ТОЛЬКО ПЕРВУЮ ЧАСТЬ СПИСКА
-            dates = (''.join(record["years"].split())).split("–")
-            death = int(dates[1].replace(".", "").replace("c", "").replace("BC", ""))
-            death = death * -1 if dates[1].find("BC") != -1 else death
-            # record["death"] = death
-            return death
+dict_list = read_json("data.json")
 
 
-print(death_date("data.json"))
+def key_sorted_by_data(obj_dict):
+    years = re.findall(r'[0-9]+', obj_dict["years"])
+    return int(years[-1]) if "BC" in obj_dict["years"] else -int(years[-1])
+
+
+new_dict_list = sorted(dict_list, key=key_sorted_by_data)
+
+print(new_dict_list)
 
 
 # 4. Написать функцию сортировки по количеству слов в поле "text".
-#
-# Отсортировать данные из файла с помощью данных функций.
+
+
+def sort_by_len_text(person_dict):
+    return len(person_dict["text"].split())
+
+
+data_math_sort_by_len_text = sorted(read_json("data.json"), key=lambda person_dict: len(person_dict["text"].split()))
+print(data_math_sort_by_len_text)

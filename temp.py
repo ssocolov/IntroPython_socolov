@@ -1,19 +1,23 @@
-# Задание.
-## Отсортировать данные из файла с помощью данных функций.
-
-
-# 1. Необходимо написать функцию, которая считает эти данные из файла и возвращала содержимое файла в той же структкру, что и в файле.
-# # Параметр функции - имя файла.
-import json
+#
+# Задание. data.json - файл с данными о некоторых математиках прошлого.
 import os
+import re
+import json
+from operator import itemgetter
 
 os.chdir("DZ_files")
 
-# def read_json(data):
-#     with open(data, "r", encoding='utf-8') as file:
-#         result = json.load(file)
-#     return result
-#
+
+# 1. Необходимо написать функцию,
+# которая считает эти данные из файла и возвращала содержимое файла в той же структкру, что и в файле. Параметр
+# функции - имя файла.
+
+def read_json(filename):
+    with open(filename, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+        return data
+
+
 # print(read_json("data.json"))
 
 
@@ -21,14 +25,11 @@ os.chdir("DZ_files")
 # Например для Rene Descartes фамилия это Descartes, у Pierre de Fermat - Fermat и т.д.
 # Если фамилии нет, то использовать имя, например Euclid.
 
-# def func(x):
-#     return x['name'].split()[-1]
-# print(func("data.json"))
-# #
 # def sort_by_surname(data):
-#     surname = sorted(data, key=func)
-#     sort_surname = sorted(data, key=abs(surname))
-#     print(sort_surname)
+#     with open(data, "r", encoding='utf-8') as file:
+#         sort_name = sorted(json.load(file), key=itemgetter('name'))
+#         return sort_name
+#
 #
 # print(sort_by_surname("data.json"))
 
@@ -36,201 +37,54 @@ os.chdir("DZ_files")
 # 3. Написать функцию сортировки по дате смерти из поля "years".
 # Обратите внимание на сокращение BC. - это означает до н.э.
 
+##### ЗАДАНИЕ НЕ ЗАКОНЧЕНО ВОЗНИКЛИ ТРУДНОСТИ
+
+# def death_date(data):
+#     with open(data, "r", encoding='utf-8') as file:
+#         for record in json.load(file):
+#             new_list = []
+#             dates = (''.join(record["years"].split())).split("–")
+#             death = int(dates[1].replace(".", "").replace("c", "").replace("BC", ""))
+#             death = death * -1 if dates[1].find("BC") != -1 else death
+#             new_list.append(death)
+#             # record["death"] = death
+#         return new_list
+#
+#
+# print(death_date("data.json"))
 
 
+# def death_date(date):
+#     with open(date, 'r', encoding='utf-8') as file:
+#         data = json.load(file)
+#     years = re.findall(r'[0-9]+', data["years"])
+#     return int(years[-1]) if "BC" in date["years"] else -int(years[-1])
+#
+#
+# new_dict_list = sorted(json.load(), key=death_date)
+#
+# print(new_dict_list)
 
 
+dict_list = read_json("data.json")
 
 
+def key_sorted_by_data(obj_dict):
+    years = re.findall(r'[0-9]+', obj_dict["years"])
+    return int(years[-1]) if "BC" in obj_dict["years"] else -int(years[-1])
+
+
+new_dict_list = sorted(dict_list, key=key_sorted_by_data)
+
+# print(new_dict_list)
 
 
 # 4. Написать функцию сортировки по количеству слов в поле "text".
 
 
+def sort_by_len_text(person_dict):
+    return len(person_dict["text"].split())
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## первое слово в строке  #####
-
-# def first_word(text):
-#     new_txt = text.split()[0]
-#     return new_txt
-#
-# text = "Hello world!"
-# print(first_word(text))
-
-## длина пароля больше 6 ####
-
-# def is_acceptable_password(password):
-#     if len(password) > 6:
-#         return True
-#     else:
-#         return False
-#
-# print(is_acceptable_password("123453"))
-
-
-## количество цифр в числе ####
-#
-# def number_lenght(a):
-#     return len(str(a))
-#
-#
-# print(number_lenght(17810))
-
-
-## количество нулей вконце числа #####
-
-# def count_zero(num):
-#     num = len(str(num)) - len(str(num).strip('0'))
-#     return num
-#
-# print(count_zero(1000023000000000))
-
-
-## перевернуть слово наоборот ###########
-# def mirror_text(text):
-#     text = text[::-1]
-#     return text
-# print(mirror_text("aihpoS"))
-
-## удалить символы до заданного #########
-#
-#
-# def remove_all_before(items: list, border: int) -> Iterable:
-#     k = j = 0
-#     for i in items:
-#         if i == border:
-#             j = k
-#             break
-#         k += 1
-#     return items[j:]
-#
-# print(list(remove_all_before([1, 2, 3, 4, 5], 3)))
-
-## проверка на большие буквы ####
-
-# def is_all_upper(text: str) -> bool:
-#     if text.upper() == text:
-#         return True
-#     elif len(text) == 0:
-#         return True
-#     return False
-
-
-# В данном списке первый элемент должен стать последним. Пустой список или список из одного элемента не должен
-# измениться.
-
-# def replace_first(my_list):
-#     if my_list == []:
-#         return []
-#     my_list.append(my_list[0])
-#     my_list.remove(my_list[0])
-#     return my_list
-#
-#
-# print(replace_first([1, 2, 3, 4]))
-
-# самая большая цифра в числе
-
-# def max_digit(a):
-#     m_dig = max([int(i) for i in str(a)])
-#     return m_dig
-#
-# print(max_digit(123))
-
-# Разделите строку на пары из двух символов. Если строка содержит нечетное количество символов, пропущенный второй символ последней пары должен быть заменен подчеркиванием ('_').
-
-# def split_pairs(pair_symb):
-#     if len(pair_symb) % 2 != 0:
-#         pair_symb = pair_symb + '_'
-#     pair_symb = ([pair_symb[i:i +2]for i in range(0, len(pair_symb), 2)])
-#     return pair_symb
-# print(split_pairs('wetdsfsdf'))
-
-
-# количество нулей в начале строки
-
-# def end_zeros(num: int) -> int:
-#     return min((i for i, c in enumerate(str(num)[::1], 0) if c != '0'), default=len(num))
-#
-# print(end_zeros('000'))
-
-
-# проверка на четность. Четное True, нечетное False
-
-# def is_even(num: int) -> bool:
-#     if num % 2 == 0:
-#         return True
-#     else:
-#         return False
-#
-#
-# print(is_even(123))
-
-
-# текст между маркерами
-
-# import re
-#
-# def between_markers(string, start, end):
-#     len_until_end_of_first_match = string.find(start) + len(start)
-#     after_start = string[len_until_end_of_first_match:]
-#     return string[string.find(start) + len(start):len_until_end_of_first_match + after_start.find(end)]
-
-
-# Найдите ближайшее значение к переданному.
-#
-# Вам даны список значений в виде множества (Set) и значение, относительно которого, надо найти ближайшее.
-#
-# Например, мы имеем следующий ряд чисел: 4, 7, 10, 11, 12, 17. И нам нужно найти ближайшее значение к цифре 9. Если отсортировать этот ряд по возрастанию, то слева от 9 будет 7, а справа 10. Но 10 - находится ближе, чем 7, значит правильный ответ 10.
-#
-# Несколько уточнений:
-#
-# Если 2 числа находятся на одинаковом расстоянии - необходимо выбрать наименьшее из них;
-# Ряд чисел всегда не пустой, т.е. размер >= 1;
-# Переданное значение может быть в этом ряде, а значит оно и является ответом;
-# В ряде могут быть как положительные, так и отрицательные числа, но они всегда целые;
-# Ряд не отсортирован и состоит из уникальных чисел.
-#
-# def nearest_value(values: set, one: int) -> int:
-#     return min(values, key=lambda n: (abs(one - n), n))
-
-
-# На вход Вашей функции будет передано одно предложение. Необходимо вернуть его исправленную копию так, чтобы оно всегда начиналось с большой буквы и заканчивалось точкой.
-
-# def correct_sentence(text ) -> str:
-#
-#     text = text[0].upper() + text[1:]
-#     if(text[-1] != '.'):
-#         text += '.'
-#
-#     return text
+data_math_sort_by_len_text = sorted(read_json("data.json"), key=lambda person_dict: len(person_dict["text"].split()))
+# print(data_math_sort_by_len_text)
