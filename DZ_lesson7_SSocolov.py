@@ -41,7 +41,7 @@ print(sort_by_surname("data.json"))
 
 def death_date(data):
     with open(data, "r", encoding='utf-8') as file:
-        for record in json.load(file):   # НЕ МОГУ ПОНЯТЬ, ПО КАКОЙ ПРИЧИНЕ ОН ВЫЧИТЫВАЕТ ИЗ СПИСКА ТОЛЬКО ПЕРВЫЙ СЛОВАРЬ
+        for record in json.load(file):   # НЕ МОГУ ПОНЯТЬ, ПО КАКОЙ ПРИЧИНЕ ОН ВЫЧИТЫВАЕТ ИЗ СПИСКА ТОЛЬКО ПЕРВУЮ ЧАСТЬ СПИСКА
             dates = (''.join(record["years"].split())).split("–")
             death = int(dates[1].replace(".", "").replace("c", "").replace("BC", ""))
             death = death * -1 if dates[1].find("BC") != -1 else death
