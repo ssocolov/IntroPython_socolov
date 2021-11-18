@@ -5,11 +5,15 @@ import os
 
 os.chdir("DZ_files")
 
+
+# функция читает весь файл
 def read_from_logs(filename):
     with open(filename, 'r') as file:
         data = file.read().split("\n")
     return data
+print(read_from_logs("logs.txt"))
 
+# функция выводит IP адреса из файла
 def get_ip_numbers(logs):
     ips = []
     for line in logs:
@@ -18,6 +22,7 @@ def get_ip_numbers(logs):
         ips += ip
     return ips
 
+# функция выводит даты из файла
 def get_dates(logs):
     dates = []
     for line in logs:
