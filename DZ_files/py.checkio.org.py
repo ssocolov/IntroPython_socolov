@@ -164,8 +164,11 @@
 # Вам дан текст в котором нужно просуммировать числа, но только разделенные пробелом. Если число является частью слова, то его суммировать не нужно.
 # Текст состоит из чисел, пробелом и английского алфавита.
 text = 'Petersen between 1845 and 1910 year'
+
+
 def sum_numbers(text: str) -> int:
     return sum(int(i) for i in str.split(text) if i.isdigit())
+
 
 # print(sum_numbers(text))
 
@@ -182,6 +185,7 @@ def checkio(array):
         if index % 2 == 0 and index <= 20:
             b = b + array[index]
     return b * array[index]
+
 
 # Давайте научим наших роботов отличать слова от чисел.
 # Дана строка со словами и числами, разделенными пробелами (один пробел между словами и/или числами). Слова состоят только из букв. Вам нужно проверить есть ли в исходной строке три слова подряд. Для примера, в строке "start 5 one two three 7 end" есть три слова подряд.
@@ -207,8 +211,12 @@ def checkio(words):
 # Дана последовательность строк. Вы должны объединить эти строки в блок текста, разделив изначальные строки запятыми. В качестве шутки над праворукими роботами, вы должны заменить все вхождения слова "right" на слова "left", даже если это часть другого слова. Все строки даны в нижнем регистре.
 
 my_tuple = ("left", "right", "left", "stop")
+
+
 def left_join(phrases: tuple) -> str:
     return ",".join(list(phrases)).replace("right", "left")
+
+
 # print(left_join(my_tuple))
 
 
@@ -221,52 +229,131 @@ def left_join(phrases: tuple) -> str:
 # Входные параметры: Строка.
 # Выходные параметры: Строка.
 import re
-pattern=r"[a-zA-Z']+"
+
+pattern = r"[a-zA-Z']+"
+
+
 def first_word(words_tuple):
-    match=re.findall(pattern,words_tuple)
+    match = re.findall(pattern, words_tuple)
     for i in match:
         if i[0].isalnum():
             return i
 
+
 # print(first_word("new.text"))
 
 
+# разница между датами в днях
+
+import datetime
 
 
-# разница между датами в днях(не решено)
-
-from datetime import datetime
-
-# def days_between(d1, d2):
-#     d1 = d1.strftime("%Y-%m-%d")
-#     d2 = d2.strftime("%Y-%m-%d")
-#     return abs((d2 - d1).days)
-#
-# print(days_between((1982, 4, 19), (1982, 4, 22)))
-# def days_diff(a, b):
-#     d1 = datetime.strptime(a, "%d.%m.%Y")
-#     d2 = datetime.strptime(b, "%d.%m.%Y")
-#     x = (d2 - d1).days
-#     return x
-# print(days_diff((1982, 4, 19), (1982, 4, 22)))
+def days_diff(date1, date2):
+    d1 = datetime.date(date1[0], date1[1], date1[2])
+    # d1 = datetime.date(*date1)
+    d2 = datetime.date(date2[0], date2[1], date2[2])
+    # d2 = datetime.date(*date2)
+    return abs(d1 - d2).days
 
 
+print(days_diff((1982, 4, 19), (1983, 4, 22)))
 
 # Вам нужно подсчитать количество цифр в данной строке.
 import re
 
+
 def count_digits(text):
-    count = sum([ 1 for text in text if text.isdigit() ])
+    count = sum([1 for text in text if text.isdigit()])
     return count
+
 
 # print(count_digits('5my 6 num2be4rs is 2'))
 
 
-
 # Требуется обратить порядок букв в каждом слове предоставленной строки, так чтобы слова остались на своих местах.
-s = 'hello world'
-lst1 = s.split()
+
+# def backward_string_by_word(text: str) -> str:
+#     return ' '.join([x[::-1] for x in text.split(' ')])
 
 
+# print(backward_string_by_word("Hallo world"))
 
-print(lst1)
+
+# популярные слова
+
+def popular_words(text: str, words: list) -> dict:
+    text = text.lower().strip("\n").split()
+    dict = {}
+    for word in words:
+        dict[word] = text.count(word)
+    return dict
+
+# количество определенных слов в тексте
+# def count_words(text, words):
+#     r = 0
+#     for w in words:
+#         if w.lower() in text.lower():
+#             r += 1
+#             return r
+#
+#
+# print(count_words("car", "My car is green."))
+
+
+# не уникальные символы в массиве
+
+my_list = ([1, 2, 3, 1, 3])
+
+
+def checkio(data):
+    for index in range(len(data) - 1, -1, -1):
+        if data.count(data[index]) == 1:
+            del data[index]
+    return data
+
+
+# print(checkio(my_list))
+
+
+# Топ самых дорогих товаров
+
+from pprint import pprint
+
+
+def find_expensive(limit, data):
+    return sorted(data, key=lambda x: x["price"], reverse=True)[:limit]
+
+
+data = \
+    [
+        {"name": "bread", "price": 100},
+        {"name": "wine", "price": 138},
+        {"name": "meat", "price": 15},
+        {"name": "water", "price": 1}
+    ]
+
+# pprint(find_expensive(2, data))
+
+
+# Between Markers
+# Вам дана строка и два маркера (начальный и конечный). Вам необходимо найти текст, заключенный между двумя этими маркерами. Но есть несколько важных условий:
+# Начальный и конечный маркеры всегда разные
+# Если нет начального маркера, то началом считать начало строки
+# Если нет конечного маркера, то концом считать конец строки
+# Если нет ни конечного, ни начального маркеров, то просто вернуть всю строку
+# Если конечный маркер стоит перед начальным, то вернуть пустую строку
+
+# def between_markers(text , begin , end )  :
+# 
+#     if text.find(begin)==-1 and text.find(end)==-1:
+#          final= text
+#     elif text.find(begin)==-1:
+#         final= text[:text.find(end)]
+#     elif text.find(end)==-1:
+#           final= text[text.find(begin)+len(begin):]
+#     elif text.find(begin)>text.find(end):
+#         final= ''
+#     else:
+#         final= text[text.find(begin)+len(begin):text.find(end)]
+# 
+#     return final
