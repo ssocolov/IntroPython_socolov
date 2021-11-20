@@ -1,4 +1,4 @@
- import os
+import os
 from string import ascii_lowercase as alphabet
 from random import shuffle
 
