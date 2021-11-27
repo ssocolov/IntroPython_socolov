@@ -99,7 +99,7 @@ class Unit:
             self.health += 10
 
     def power_plus(self):
-        if self.intellect < 10:
+        if self.power < 10:
             self.power += 1
 
     def agility_plus(self):
