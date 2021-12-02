@@ -28,12 +28,12 @@ def input_rate():
     return curr
 
 
-# print(input_rate())
+print(input_rate())
 
 
 # запрос на покупку USD "BUY" + конвертация в UAH
 def input_buy():
-
+    # global buy_usd
     oper1 = input()
     if oper1 == 'BUY':
         USD_input = int(input("Введите сумму USD для покупки: "))
@@ -42,10 +42,10 @@ def input_buy():
 
 
 # покупаем USD конвертация
-# def exchange_USD_to_UAH():
-#     USD_input = int(input("Введите сумму USD для покупки: "))
-#     UAH_to_by_USD = Currency_exchange_rate_dollar() * USD_input
-#     return UAH_to_by_USD
+def exchange_USD_to_UAH():
+    USD_input = int(input("Введите сумму USD для покупки: "))
+    UAH_to_by_USD = Currency_exchange_rate_dollar() * USD_input
+    return UAH_to_by_USD
 
 
 print(input_buy())
@@ -64,13 +64,13 @@ print(input_sell())
 
 
 # продаем USD конвертация
-# def exchange_UAH_to_USD():
-#     USD_input = int(input("Введите сумму USD для продажи: "))
-#     USD_to_SELL = Currency_exchange_rate_dollar() * USD_input
-#     return USD_to_SELL
+def exchange_UAH_to_USD():
+    USD_input = int(input("Введите сумму USD для продажи: "))
+    USD_to_SELL = Currency_exchange_rate_dollar() * USD_input
+    return USD_to_SELL
 
 
-# print(exchange_UAH_to_USD())
+print(exchange_UAH_to_USD())
 
 
 # Чтение файла JSON содержащего данные по балансам USD и UAH
@@ -89,7 +89,7 @@ def read_balance_USD_json(file):  # читаем из файла баланс д
         return data['Balance']['USD']
 
 
-# print(read_balance_USD_json('balance_default.json'))
+print(read_balance_USD_json('balance_default.json'))
 
 
 # Остаток UAH на счету после покупки
@@ -98,7 +98,7 @@ def UAH_balance_after_buy():
     return UAH_new_balance
 
 
-# print(UAH_balance_after_buy())
+print(UAH_balance_after_buy())
 
 
 # записать новый баланс в файл
