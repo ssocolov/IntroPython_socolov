@@ -1,5 +1,5 @@
 #
-# Задание. balance.json - файл с данными о некоторых математиках прошлого.
+# Задание. balance_default.json - файл с данными о некоторых математиках прошлого.
 import os
 import re
 import json
@@ -18,7 +18,7 @@ def read_json(filename):
         return data
 
 
-# print(read_json("balance.json"))
+# print(read_json("balance_default.json"))
 
 
 # 2. Написать функцию сортировки данных по ФАМИЛИИ в поле "name" (у тех у кого она есть).
@@ -31,7 +31,7 @@ def read_json(filename):
 #         return sort_name
 #
 #
-# print(sort_by_surname("balance.json"))
+# print(sort_by_surname("balance_default.json"))
 
 
 # 3. Написать функцию сортировки по дате смерти из поля "years".
@@ -51,7 +51,7 @@ def read_json(filename):
 #         return new_list
 #
 #
-# print(death_date("balance.json"))
+# print(death_date("balance_default.json"))
 
 
 # def death_date(date):
@@ -66,7 +66,7 @@ def read_json(filename):
 # print(new_dict_list)
 
 
-dict_list = read_json("balance.json")
+dict_list = read_json("balance_default.json")
 
 
 def key_sorted_by_data(obj_dict):
@@ -86,5 +86,5 @@ def sort_by_len_text(person_dict):
     return len(person_dict["text"].split())
 
 
-data_math_sort_by_len_text = sorted(read_json("balance.json"), key=lambda person_dict: len(person_dict["text"].split()))
+data_math_sort_by_len_text = sorted(read_json("balance_default.json"), key=lambda person_dict: len(person_dict["text"].split()))
 # print(data_math_sort_by_len_text)

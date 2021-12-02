@@ -45,25 +45,25 @@ def read_balance_json(file):
         return data
 
 
-print(read_balance_json("balance.json"))
+print(read_balance_json("balance_default.json"))
 
 
 # def write_json(filename, data, indent=None):
-#     with open('balance.json', 'w') as f:
+#     with open('balance_default.json', 'w') as f:
 #         json.dump(data, f, ensure_ascii=False)
 
 
-# with open('balance.json') as f:
+# with open('balance_default.json') as f:
 #     data = json.load(f)
 #     data['UAH'] =
-# with open('balance.json', 'w') as f:
+# with open('balance_default.json', 'w') as f:
 #     json.dump(data, ensure_ascii=False, indent=4)
 #
 # import json
-# with open('balance.json') as f:
+# with open('balance_default.json') as f:
 #     data = json.load(f)
 # data['UAH'] = 'bye'
-# with open('balance.json', 'w') as f:
+# with open('balance_default.json', 'w') as f:
 #     json.dump(data, ensure_ascii=False, indent=4)
 
 
