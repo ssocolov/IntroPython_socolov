@@ -52,7 +52,7 @@ print(input_sell())
 def read_balance_UAH_json(file):  # читаем из файла баланс гривен
     with open(file, 'r') as file:
         data = json.load(file)
-        return data
+        return data ["Balance"] ["UAH"]
 #
 read_balance_UAH_json("balance_default.json")
 
@@ -60,23 +60,16 @@ read_balance_UAH_json("balance_default.json")
 def input_available():
     oper3 = input()
     if oper3 == 'AVAILABLE':
-        return read_balance_UAH_json("balance_default.json")
+        UAH_Balance = read_balance_UAH_json("balance_default.json") - input_buy()
+        return UAH_Balance
 
 print(input_available())
-
-# Остаток UAH на счету после покупки USD нажать 'enter"
-def UAH_balance_after_buy():
-    UAH_new_balance = read_balance_UAH_json("balance_default.json") - input_buy()
-    return UAH_new_balance
-
-UAH_balance_after_buy()
-
 
 # читаем файл с временным балансом UAH ("balance_temp.json")
 def read_balance_UAH_json(file):  # читаем из файла баланс гривен
     with open(file, 'r') as file:
         data = json.load(file)
-        return data ["Balance"] ["UAH"]
+        return data
 #
 print(read_balance_UAH_json("balance_UAH_temp.json"))
 
