@@ -1,1 +1,6 @@
-{"Balance": {"USD": 0, "UAH": 10000}}
+{
+    "Balance": {
+        "USD": 0,
+        "UAH": 10000
+    }
+}
